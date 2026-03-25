@@ -1018,7 +1018,7 @@ const S = {
 const WA_NUM = '5519983321065';
 const PROD_ICO = { Cesta:'🧺', Caixa:'🎁', Caneca:'☕' };
 const FMTS = {
-  Cesta:  [{v:'Redonda',e:'🪣',s:'Clássica'},{v:'Retangular',e:'🟫',s:'Espaçosa'},{v:'Coração',e:'❤️',s:'Romântica'}],
+  Cesta:  [{v:'Redonda',e:'🪣',s:'Clássica'},{v:'Retangular',e:'🟫',s:'Espaçosa'},{v:'Coração',e:'❤️',s:'Romântica'},{v:'Café da Manhã',e:'🥐',s:'Especial'}],
   Caixa:  [{v:'Retangular',e:'📦',s:'Clássica'},{v:'Quadrada',e:'🎁',s:'Compacta'},{v:'Redonda',e:'🫙',s:'Única'}],
   Caneca: [{v:'Cerâmica',e:'☕',s:'Clássica'},{v:'Acrílico',e:'🥤',s:'Moderna'}],
 };
@@ -1046,7 +1046,7 @@ function buildProg(){
 function buildFmt(){
   const opts=FMTS[S.produto]||[];
   const g=document.getElementById('fmtOpts');
-  g.className='opt-grid '+(opts.length===2?'c2':'c3');
+  g.className='opt-grid '+(opts.length===2?'c2':opts.length===4?'c2':'c3');
   g.innerHTML='';
   opts.forEach(o=>{
     const c=document.createElement('div');
